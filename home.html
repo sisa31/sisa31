@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            background-color: aquamarine;
+            z-index: -1;
+            top: -28px;
+            color: black;
+            padding: 2px 4px 2px 4px;
+            height: auto;
+            text-align: center;
+            width: fit-content;
+            position: relative;
+            display: block;
+        }
+        
+        h1:hover {
+            color: greenyellow;
+            height: 10%;
+            width: 17%;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="#" id="navplus"><img src="Untitled-design-(30).png" height="20px" width=30px" alt=""></a>
+            <a href="#" id="navnus"><img src="Untitled-design-(30).png" height="20px" width="30px" alt=""></a>
+        </li>
+        <li>
+            <a href="home.html">Home</a>
+        </li>
+        <li>
+            <a href="#">News</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
+        <li>
+            <a href="#">About</a>
+        </li>
+    </ul>
+    <div class="side">
+        <p><a href="#">Dashboard</a></p>
+        <p><a href="#">Change Password</a></p>
+    </div>
+    <div></div>
+    <div class="content">Site Body content goes here</div>
+
+    <script>
+        $('#navnus').hide();
+        $('.side').hide();
+
+        $('#navplus').click(function() {
+            $('#navplus').hide();
+            $('#navnus').show();
+            $('.side').show();
+
+
+        });
+
+        $('#navnus').click(function() {
+            $('#navplus').show();
+            $('#navnus').hide();
+            $('.side').hide();
+
+
+        });
+    </script>
+</body>
+
+</html>

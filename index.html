@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-size: 30px;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #666;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+        li {
+            float: left;
+            border-right: 1px solid #bbb;
+        }
+        
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        /* Change the link color to #111 (black) on hover */
+        
+        li a:hover {
+            background-color: #111;
+        }
+        
+        .active {
+            background-color: #4CAF50;
+        }
+        
+        .side {
+            z-index: -1;
+            top: 50px;
+            background: gray;
+            padding: 2px 4px 2px 4px;
+            height: auto;
+            color: white;
+            float: left;
+            height: 30%;
+            width: 30%;
+            position: relative;
+            display: block;
+        }
+        
+        .side a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        
+        .content {
+            z-index: -1;
+            background: lavender;
+            top: 50px;
+            float: right;
+            width: 69%;
+            height: 30%;
+            position: relative;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="#" id="navplus"><img src="Untitled-design-(30).png" height="20px" width=30px" alt=""></a>
+            <a href="#" id="navnus"><img src="Untitled-design-(30).png" height="20px" width="30px" alt=""></a>
+        </li>
+        <li>
+            <a href="home.html">Home</a>
+        </li>
+        <li>
+            <a href="#">News</a>
+        </li>
+        <li>
+            <a href="#">Contact</a>
+        </li>
+        <li>
+            <a href="#">About</a>
+        </li>
+    </ul>
+    <div class="side">
+        <p><a href="#">Dashboard</a></p>
+        <p><a href="#">Change Password</a></p>
+    </div>
+    <div class="content">Site Body content goes here</div>
+
+    <script>
+        $('#navnus').hide();
+        $('.side').hide();
+
+        $('#navplus').click(function() {
+            $('#navplus').hide();
+            $('#navnus').show();
+            $('.side').show();
+
+
+        });
+
+        $('#navnus').click(function() {
+            $('#navplus').show();
+            $('#navnus').hide();
+            $('.side').hide();
+
+
+        });
+    </script>
+</body>
+
+</html>
